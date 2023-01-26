@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  redis:
+    container_name: app_redis
+    image: redis
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      - task-manager
+    ports:
+      - "6379:6379"
+
+networks:
+  task-manager:
+    external: true
