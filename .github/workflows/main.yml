@@ -1,7 +1,6 @@
 name: task-manager-redis-ci
 
 on:
-  push:
   workflow_dispatch: 
 
 jobs:
