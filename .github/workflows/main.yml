@@ -1,6 +1,7 @@
 name: task-manager-redis-ci
 
 on:
+  push:
   workflow_dispatch: 
 
 jobs:
@@ -9,8 +10,3 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: docker-compose up -d
-  stop:
-    runs-on: self-hosted
-    steps:
-    - uses: actions/checkout@v2
-    - run: docker-compose down
